@@ -42,7 +42,8 @@ public class CalculatorTest {
 
     @Test
     public void multiply() throws Exception {
-
+        calculator.multiply(2);
+        Assert.assertEquals(12, calculator.getResult(), 0);
     }
 
     @Test
