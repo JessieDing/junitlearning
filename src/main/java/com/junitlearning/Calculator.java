@@ -24,7 +24,10 @@ public class Calculator {
         result = result * number;
     }
 
-    public void divide(double number) {
+    public void divide(double number) throws Exception {
+        if (number == 0) {
+            throw new Exception("number cannot be 0");
+        }
         result = result / number;
     }
 

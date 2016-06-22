@@ -29,30 +29,42 @@ public class CalculatorTest {
     }
 
     @Test
-    public void add() throws Exception {
-        calculator.add(4);
+    public void shouldReturn10WhenAdd4() throws Exception {
+        double number = 4;
+        calculator.add(number);
         Assert.assertEquals(10, calculator.getResult(), 0);
     }
 
     @Test
-    public void subtract() throws Exception {
-        calculator.subtract(4);
+    public void shouldReturn2WhenSubtract4() throws Exception {
+        double number = 4;
+        calculator.subtract(number);
         Assert.assertEquals(2, calculator.getResult(), 0);
     }
 
     @Test
-    public void multiply() throws Exception {
-        calculator.multiply(2);
+    public void shouldReturn12WhenMultiply2() throws Exception {
+        double number = 2;
+        calculator.multiply(number);
         Assert.assertEquals(12, calculator.getResult(), 0);
     }
 
     @Test
-    public void divide() throws Exception {
+    public void shouldReturn3WhenDivide2() throws Exception {
+        double number = 2;
+        calculator.divide(number);
+        Assert.assertEquals(3, calculator.getResult(), 0);
+    }
 
+    @Test(expected = Exception.class)
+    public void shouldFailWhenDivide0() throws Exception {
+        double number = 0;
+        calculator.divide(number);
     }
 
     @Test
-    public void getResult() throws Exception {
-
+    public void shouldReturn6WhenGetDefaultResult() throws Exception {
+        double result = calculator.getResult();
+        Assert.assertEquals(6, result, 0);
     }
 }
