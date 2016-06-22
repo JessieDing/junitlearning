@@ -28,6 +28,10 @@ public class Calculator {
         result = result / number;
     }
 
+    public void clear() {
+        result = 0;
+    }
+
     public double getResult() {
         return result;
     }
