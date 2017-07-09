@@ -2,7 +2,8 @@ package com.junitlearning;
 
 import org.junit.*;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class CalculatorTest {
 
@@ -32,7 +33,7 @@ public class CalculatorTest {
     public void shouldReturn10WhenAdd4() throws Exception {
         double number = 4;
         calculator.add(number);
-        Assert.assertEquals(10, calculator.getResult(), 0);
+        assertEquals(10, calculator.getResult(), 0);
     }
 
     @Test
@@ -63,7 +64,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturn6WhenGetDefaultResult() throws Exception {
+    public void shouldReturn6WhenGetDefaultResult() {
         double result = calculator.getResult();
         Assert.assertEquals(6, result, 0);
     }
